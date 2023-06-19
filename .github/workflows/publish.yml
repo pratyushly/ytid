@@ -1,0 +1,46 @@
+name: Distribution Worflow
+on:
+  push:
+    branches:
+      - "main"
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  test-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: "pnpm"
+
+      # We install all the dependencies
+      - run: pnpm install --frozen-lockfile
+      
+      # We check if whether we have a changeset or not
+      #
+      # If there is no changeset, then it means that it is an ordinary commit
+      # and the action simply runs `pnpm distribute`
+      # and because, the package version remains same in the commit,
+      # so npm will not publish this new commit 
+      # (good for commit types like refactor:)
+      #
+      # However, if there is a changeset, then it means the version needs to be pumped up
+      # so changeset will create a PR to update the changelog and the version
+      #
+      # After we accept the PR, we will have a new commit,
+      # without a changeset, which will cause this new commit to through `pnpm distribute`
+      # and because this time the version has been changed so, npm will publish it :)
+      - name: Changeset - Either create a pull request or publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm distribute
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
