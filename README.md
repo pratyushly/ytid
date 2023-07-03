@@ -106,12 +106,62 @@ As a result, ytid doesn't generate IDs like ```7-GoToHell3``` or ```shit9RcYjcM`
 
 The dataset of offensive / profane words is a combination of various datasets -
 
-| Dataset       | Source        | Instances (Rows)        |
-| ---           | ---           | ---              |
-| Google's ["what do you love" project](https://en.wikipedia.org/wiki/WDYL_(search_engine)) | https://gist.github.com/jamiew/1112488 | 451 |
-| Bad Bad Words | https://www.kaggle.com/datasets/nicapotato/bad-bad-words | 1617
-| [Surge AI](https://www.surgehq.ai/)'s The Obscenity List | https://github.com/surge-ai/profanity | 1599 |
-| washyourmouthoutwithsoap | https://github.com/thisandagain/washyourmouthoutwithsoap | 147 |
+<table>
+  <thead>
+    <tr>
+      <th>Dataset</th>
+      <th>Source</th>
+      <th>Language</th>
+      <th>Instances (Rows)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google's <a href="https://en.wikipedia.org/wiki/WDYL_(search_engine)">&quot;what do you love&quot;
+          project</a></td>
+      <td><a href="https://gist.github.com/jamiew/1112488">https://gist.github.com/jamiew/1112488</a></td>
+      <td rowspan="4">English</td>
+      <td>451</td>
+    </tr>
+    <tr>
+      <td>Bad Bad Words</td>
+      <td><a
+          href="https://www.kaggle.com/datasets/nicapotato/bad-bad-words">https://www.kaggle.com/datasets/nicapotato/bad-bad-words</a>
+      </td>
+      <td>1617</td>
+    </tr>
+    <tr>
+      <td>Surge AI's The Obscenity List</td>
+      <td><a href="https://github.com/surge-ai/profanity">https://github.com/surge-ai/profanity</a></td>
+      <td>1598</td>
+    </tr>
+    <tr>
+      <td>washyourmouthoutwithsoap</td>
+      <td><a href="https://github.com/thisandagain/washyourmouthoutwithsoap">https://github.com/thisandagain/washyourmouthoutwithsoap</a></td>
+      <td>147</td>
+    </tr>
+    <tr>
+      <td>Multilingual swear profanity</td>
+      <td><a href="https://www.kaggle.com/datasets/miklgr500/jigsaw-multilingual-swear-profanity">https://www.kaggle.com/datasets/miklgr500/jigsaw-multilingual-swear-profanity</a>
+      </td>
+      <td rowspan="3">Spanish</td>
+      <td>366</td>
+    </tr>
+    <tr>
+      <td>Surge AI's Spanish Dataset</td>
+      <td>
+      <a href="https://www.surgehq.ai/datasets/spanish-profanity-list">https://www.surgehq.ai/datasets/spanish-profanity-list</a>
+      </td>
+      <td>178</td>
+    </tr>
+    <tr>
+      <td>washyourmouthoutwithsoap</td>
+      <td><a href="https://github.com/thisandagain/washyourmouthoutwithsoap">https://github.com/thisandagain/washyourmouthoutwithsoap</a>
+      </td>
+      <td>125</td>
+    </tr>
+  </tbody>
+</table>
 
 These datasets undergo the following preprocessing steps - 
 
@@ -124,7 +174,7 @@ These datasets undergo the following preprocessing steps -
 5. Then, duplicate values are removed from this new dataset.
 6. Finally, only the instances that match the regex pattern ```^[A-Za-z0-9_-]{0,11}$``` are kept, while the rest are removed. This keeps the number of instances to a minimum by removing unnecessary words or phrases.
 
-Preprocessing yields a dataset of 2885 instances, that helps ensure the generated IDs are safe for using in URLs and for sharing on social media platforms.
+Preprocessing yields a dataset of 3279 instances, that helps ensure the generated IDs are safe for using in URLs and for sharing on social media platforms.
 
 The preprocessing was done on this [Colab Jupyter notebook](https://colab.research.google.com/drive/1LRA3_Qa_0qCL9bkfo06ztjWkr-aP4rz1).
 
