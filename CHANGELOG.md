@@ -1,5 +1,11 @@
 # ytid
 
+## 1.1.0
+
+### Minor Changes
+
+- c109c85: expand dataset to include words / phrases from Spanish
+
 ## 1.0.0
 
 ### Major Changes
