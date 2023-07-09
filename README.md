@@ -180,6 +180,14 @@ The preprocessing was done on this [Colab Jupyter notebook](https://colab.resear
 
 Future release(s) will expand the dataset to include words / phrases from other languages (that use English alphabets). 
 
+## Stargazers
+
+<a href="https://github.com/pratyushly/ytid/stargazers">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://reporoster.com/stars/dark/pratyushly/ytid">
+    <img src="https://reporoster.com/stars/pratyushly/ytid">
+  </picture>
+</a>
 
 ## License
 
