@@ -160,6 +160,26 @@ The dataset of offensive / profane words is a combination of various datasets -
       </td>
       <td>125</td>
     </tr>
+    <tr>
+      <td>Bad Words in German</td>
+      <td><a href="https://data.world/wordlists/dirty-naughty-obscene-and-otherwise-bad-words-in-german">https://data.world/wordlists/dirty-naughty-obscene-and-otherwise-bad-words-in-german</a>
+      </td>
+      <td rowspan="3">German</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>Surge AI's German Dataset</td>
+      <td>
+      <a href="https://www.surgehq.ai/datasets/german-profanity-list">https://www.surgehq.ai/datasets/german-profanity-list</a>
+      </td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <td>washyourmouthoutwithsoap</td>
+      <td><a href="https://github.com/thisandagain/washyourmouthoutwithsoap">https://github.com/thisandagain/washyourmouthoutwithsoap</a>
+      </td>
+      <td>133</td>
+    </tr>
   </tbody>
 </table>
 
@@ -174,7 +194,7 @@ These datasets undergo the following preprocessing steps -
 5. Then, duplicate values are removed from this new dataset.
 6. Finally, only the instances that match the regex pattern ```^[A-Za-z0-9_-]{0,11}$``` are kept, while the rest are removed. This keeps the number of instances to a minimum by removing unnecessary words or phrases.
 
-Preprocessing yields a dataset of 3279 instances, that helps ensure the generated IDs are safe for using in URLs and for sharing on social media platforms.
+Preprocessing yields a dataset of 3467 instances, that helps ensure the generated IDs are safe for using in URLs and for sharing on social media platforms.
 
 The preprocessing was done on this [Colab Jupyter notebook](https://colab.research.google.com/drive/1LRA3_Qa_0qCL9bkfo06ztjWkr-aP4rz1).
 
