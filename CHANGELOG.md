@@ -1,5 +1,11 @@
 # ytid
 
+## 1.2.0
+
+### Minor Changes
+
+- e43def7: expand dataset to include words / phrases from German
+
 ## 1.1.0
 
 ### Minor Changes
