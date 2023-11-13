@@ -109,18 +109,18 @@ The dataset of offensive / profane words is a combination of various datasets -
 <table>
   <thead>
     <tr>
+      <th>Language</th>
       <th>Dataset</th>
       <th>Source</th>
-      <th>Language</th>
       <th>Instances (Rows)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td rowspan="4">English</td>
       <td>Google's <a href="https://en.wikipedia.org/wiki/WDYL_(search_engine)">&quot;what do you love&quot;
           project</a></td>
       <td><a href="https://gist.github.com/jamiew/1112488">https://gist.github.com/jamiew/1112488</a></td>
-      <td rowspan="4">English</td>
       <td>451</td>
     </tr>
     <tr>
@@ -141,10 +141,10 @@ The dataset of offensive / profane words is a combination of various datasets -
       <td>147</td>
     </tr>
     <tr>
+      <td rowspan="3">Spanish</td>
       <td>Multilingual swear profanity</td>
       <td><a href="https://www.kaggle.com/datasets/miklgr500/jigsaw-multilingual-swear-profanity">https://www.kaggle.com/datasets/miklgr500/jigsaw-multilingual-swear-profanity</a>
       </td>
-      <td rowspan="3">Spanish</td>
       <td>366</td>
     </tr>
     <tr>
@@ -161,10 +161,10 @@ The dataset of offensive / profane words is a combination of various datasets -
       <td>125</td>
     </tr>
     <tr>
+      <td rowspan="3">German</td>
       <td>Bad Words in German</td>
       <td><a href="https://data.world/wordlists/dirty-naughty-obscene-and-otherwise-bad-words-in-german">https://data.world/wordlists/dirty-naughty-obscene-and-otherwise-bad-words-in-german</a>
       </td>
-      <td rowspan="3">German</td>
       <td>65</td>
     </tr>
     <tr>
