@@ -1,5 +1,11 @@
 # ytid
 
+## 1.3.0
+
+### Minor Changes
+
+- edeefdc: expand dataset to include words / phrases from French
+
 ## 1.2.0
 
 ### Minor Changes
